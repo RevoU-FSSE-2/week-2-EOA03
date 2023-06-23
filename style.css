@@ -1,0 +1,319 @@
+@media only screen and (max-width:768px) {
+    #openNav{display: block;}
+
+    .menu{display: none;}
+    
+    @keyframes bounce{
+        0%, 100%, 50%, 80%{
+            -webkit-transform: translateY(0);
+            -ms-transform: translateY(0);
+            transform: translateY(0);
+        }
+        40%{
+            -webkit-transform: translateY(-8px);
+            -ms-transform: translateY(-8px);
+            transform: translateY(5px);
+        }
+        60%{
+            -webkit-transform: translateY(-8px);
+            -ms-transform: translateY(-8px);
+            transform: translateY(-8px);
+        }
+    }
+
+    #openNav{
+        font-size: 35px;
+        cursor: pointer;
+        transition: transform 2s;
+        -webkit-animation-duration: 1s;
+        animation-duration: 1s;
+        -webkit-animation-fill-mode: both;
+        animation-fill-mode: both;
+        -webkit-animation-timing-function: ease-in-out;
+        animation-timing-function: ease-in-out;
+        animation-iteration-count: infinite;
+    }
+
+    #openNav:hover{
+        animation-name: bounce;
+        -moz-animation-name: bounce;
+    }
+
+    .product1, .product2, .product3{
+        display: grid;
+        grid-template-areas: auto;
+        align-items: center;
+    }
+
+    .item1-1{grid-area: 1/1; width: 100%;}
+    .item1-2{grid-area: 1/2; width: 100%;}
+    .item1-3{grid-area: 2/1; width: 100%;}
+    .item1-4{grid-area: 2/2; width: 100%;}
+    .item2-1{grid-area: 1/1; width: 100%;}
+    .item2-2{grid-area: 1/2; width: 100%;}
+    .item2-3{grid-area: 1/3; width: 100%;}
+    .item2-4{grid-area: 2/1; width: 100%;}
+    .item2-5{grid-area: 2/2; width: 100%;}
+    .item3-1{grid-area: 1/1; width: 100%;}
+    .item3-2{grid-area: 1/2; width: 100%;}
+    .item3-3{grid-area: 1/3; width: 100%;}
+    .item3-4{grid-area: 2/1; width: 100%;}
+    .item3-5{grid-area: 2/2; width: 100%;}
+}
+
+@media only screen and (min-width:769px){
+    #openNav{display: none;}
+
+    .menu{display: block;}
+
+    #navbar{justify-content: space-between;}
+
+    .tools{
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+    }
+
+    li img{width: 20%;}
+
+    .product1, .product2, .product3{display: flex; align-items: center;}
+}
+
+@media only screen and (max-width:599px){
+    figure img{width: 200px;}
+
+    iframe{
+        max-width: 200px;
+        height: auto;
+    }
+
+    header p{
+        word-wrap: break-word;
+        text-align: center;
+    }
+
+    .item1-1{grid-area: 1; width: 50%;}
+    .item1-2{grid-area: 2; width: 50%;}
+    .item1-3{grid-area: 3; width: 50%;}
+    .item1-4{grid-area: 4; width: 50%;}
+    .item2-1{grid-area: 1; width: 50%;}
+    .item2-2{grid-area: 2; width: 50%;}
+    .item2-3{grid-area: 3; width: 50%;}
+    .item2-4{grid-area: 4; width: 50%;}
+    .item2-5{grid-area: 5; width: 50%;}
+    .item3-1{grid-area: 1; width: 50%;}
+    .item3-2{grid-area: 2; width: 50%;}
+    .item3-3{grid-area: 3; width: 50%;}
+    .item3-4{grid-area: 4; width: 50%;}
+    .item3-5{grid-area: 5; width: 50%;}
+}
+
+@media only screen and (min-width:375px){
+    figure img{width: 300px;}
+
+    iframe{
+        max-width: 300px;
+        height: 200px;
+    }
+}
+
+@media only screen and (min-width:600px){
+    .product{display: flex;}
+    
+    figure img{width: 400px;}
+
+    iframe{
+        max-width: 400px;
+        height: 300px;
+    }
+}
+
+body{margin: 0;}
+
+#navbar, nav div span{
+    overflow: hidden;
+    height: 50px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 0 5px;
+    background-color: white;
+}
+
+.sidenav{
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 1;
+    background-color: #111;
+    overflow-x: hidden;
+    transition: 0.5s;
+    padding-top: 60px;
+}
+
+.sidenav a{
+    padding: 10px 5px 10px 20px;
+    text-decoration: none;
+    font-size: 25px;
+    color: #888;
+    display: block;
+    transition: 0.3s;
+}
+
+.sidenav a:hover, .sidenav a.active{color: #f1f1f1;}
+
+.closeNav{
+    position: absolute;
+    top: 0;
+    right: 25px;
+    font-size: 36px;
+    margin-left: 50px;
+}
+
+main{
+    transition: margin-left .5s;
+    padding: 16px;
+}
+
+.sticky{
+    position: fixed;
+    top: 0;
+    width: 100%;
+}
+
+.logo img{
+    height: 40px;
+    width: auto;
+}
+
+.name-club{font-weight: 700;}
+
+.menu ul li{
+    display: inline;
+    padding-right: 10px;
+}
+
+li a:hover{
+    padding: 5px;
+    background-color: #2f2f2f;
+    color: #d6d6d6;
+}
+
+header{
+    background-color: #222222;
+    color: white;
+    height: 300px;
+    padding-top: 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+h2{
+    text-align: center;
+    margin-top: 20px;
+}
+
+figure{text-align: center;}
+
+.video{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.form-feedback, .form-workshop{
+    overflow: visible;
+    margin: 15px;
+    padding: 10px;
+    background-color: #333333;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+form{
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+label, small{
+    display: block;
+    padding: 5px;
+}
+
+form h3{margin-top: 30px;}
+
+.level{display: inline;}
+
+fieldset, input{margin-bottom: 10px;}
+
+.button{
+    display: flex;
+    justify-content: center;
+    margin: 5px;
+    padding: 5px;
+}
+
+form div button{
+    border-radius: 10px;
+    background-color: #d6d6d6;
+    color: #2f2f2f;
+    padding: 5px;
+}
+
+#send:hover, #send:focus, #submit:hover, #submit:focus{
+    color: white;
+    background-color: #333333;
+}
+
+.modal{
+    display: none;
+    position: fixed;
+    z-index: 1;
+    padding-top: 100px;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.4);
+}
+
+.modal-feedback, .modal-work{
+    background-color: #fefefe;
+    margin: auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%;
+}
+
+.closeFeed, .closeWork{
+    color: #aaaaaa;
+    float: right;
+    font-size: 30px;
+    font-weight: bold;
+}
+
+.closeFeed:hover, .closeFeed:focus, .closeWork:hover, .closeWork:focus{
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+div div p{color: black;}
+
+footer{
+    background-color: #222222;
+    color: #fefefe;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
