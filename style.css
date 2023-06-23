@@ -42,7 +42,7 @@
     .product1, .product2, .product3{
         display: grid;
         grid-template-areas: auto;
-        align-items: center;
+        align-items: center;justify-items: center;
     }
 
     .item1-1{grid-area: 1/1; width: 100%;}
